@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Anton");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+main {
+    min-height: calc(100vh - 8.37rem - 3.4rem);
+}
+
+.backdrop {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+/* ======== HEADER ======== */
+
+.toggle-button {
+    width: 2.5rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.toggle-button__bar {
+    margin: 0.5rem 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    display: block;
+}
+
+.main-header {
+    width: 100%;
+    position: fixed;
+    background: #2ddf5c;
+    padding: 8px 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header__brand {
+    color: #0e4f1f;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    height: 2.5rem;
+    vertical-align: middle;
+}
+
+.main-header__brand img {
+    height: 100%;
+}
+
+/* ======== MAIN NAV ======== */
+
+.main-nav {
+    display: none;
+}
+
+.main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+    color: white;
+    border-bottom: 5px solid white;
+}
+
+.main-nav__item--cta a {
+    color: white;
+    background: #ff1b68;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+    color: #ff1b68;
+    background: white;
+    border: none;
+}
+
+/* ======== BUTTONS ======== */
+
+.btn {
+    background-color: #072a10;
+    color: white;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 8px 10px;
+    border: 2px solid #072a10;
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+    background: white;
+    color: #0e4f1f;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/* ======== MOBILE NAV ======== */
+
+.close-mobile-nav-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 3rem auto;
+    color: white;
+    background-color: #188134;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+}
+
+.close-mobile-nav-btn:hover {
+    background-color: #1c923c;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.mobile-nav__items {
+    list-style: none;
+    padding: 0;
+    margin-top: rem;
+    text-align: center;
+}
+
+.mobile-nav__item {
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.mobile-nav__item a {
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+.mobile-nav__item a:hover,
+.mobile-nav__item a:active {
+    color: #188134;
+}
+
+.mobile-nav__item--cta a {
+    color: white;
+    background: #ff1b68;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
+    color: #fff;
+    background: #e1175a;
+    border: none;
+}
+
+
+/* ======== FOOTER ======== */
+
+.main-footer {
+    background: black;
+    padding: 2rem;
+}
+
+.main-footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.main-footer__link {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.main-footer__link a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+    color: #ccc;
+}
+
+/* ======== MEDIA QUERIES ======== */
+
+@media (min-width: 40rem) {
+    .main-nav {
+        display: inline-block
+    }
+
+    .toggle-button {
+        display: none;
+    }
+}
