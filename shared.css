@@ -9,10 +9,18 @@
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
 }
 
 main {
     min-height: calc(100vh - 8.37rem - 3.4rem);
+    /* grid-row: 2 / 3; */
+    grid-area: main;
 }
 
 .backdrop {
@@ -55,6 +63,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    grid-area: header;
 }
 
 .main-header__brand {
@@ -158,14 +167,19 @@ main {
 }
 
 .mobile-nav {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
+    transform: translateX(-100vw);
+    transition: transform .3s ease-out;
     z-index: 100;
     width: 100vw;
     height: 100vh;
     background-color: #fff;
+}
+
+.mobile-nav-trans {
+    transform: translateX(0);
 }
 
 .mobile-nav__items {

@@ -4,11 +4,11 @@ const mobileNav = document.querySelector('.mobile-nav');
 const closeMobileNavBtn = document.querySelector('.close-mobile-nav-btn');
 
 function openMobileNav() {
-  mobileNav.style.display = 'block';
+  mobileNav.classList.add('mobile-nav-trans');
 }
 
 function closeMobileNav() {
-  mobileNav.style.display = 'none';
+  mobileNav.classList.remove('mobile-nav-trans');
 }
 
 toggle.addEventListener('click', openMobileNav);
